@@ -1,0 +1,167 @@
+   /* Reset */
+   * ,*::before ,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Root Variable */
+:root{
+    --color-btn:#219f95;
+    --color-secondary-light: #afcedd;
+    --color-secondary-dark: #234894;
+    --color-primary-dark: #1e1e1e;
+    --color-primary-medium:#696969;
+    --color-primary-light:#fff;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+/* Container */
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.btn{
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1.2rem;
+}
+
+.btn--primary{
+    background-color: var(--color-btn);
+    color: var(--color-primary-light);
+}
+
+@media screen and (min-width: 768px) {
+    .btn{
+        font-size: 1.4rem;
+    }
+}
+
+.block{
+    padding: 5rem 2rem;
+}
+
+.request{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.request-part{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.request-part__upload{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.upload--part{
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload--part div{
+    background-color: var(--color-secondary-light);
+    color: var(--color-secondary-dark);
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: 1rem;
+}
+
+.upload--part p{
+    font-size: 1.6rem;
+    color: var(--color-secondary-dark);
+    margin-left: 1rem;
+}
+
+.form input{
+    color: var(--color-primary-medium);
+    font-size: 1.2rem;
+}
+
+.request-part__membership{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.membership--request{
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--color-primary-dark);
+}
+
+.membership--id{
+    font-size: 1.2rem;
+    color: var(--color-primary-medium);
+}
+
+.request-part__img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.request-part__img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+.img--part p{
+    font-size: 1.4rem;
+}
+
+.img--part{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .request{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .upload--part p{
+        font-size: 1.8rem;
+    }
+    .img--part p{
+        font-size: 1.6rem;
+    }
+    .membership--request{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .request{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}
